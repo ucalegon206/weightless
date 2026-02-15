@@ -73,6 +73,31 @@ Open [http://localhost:3000](http://localhost:3000) with your browser.
 *   **Physics**: Rapier (WASM)
 *   **AI**: WebLLM (Browser-native LLM inference)
 
+## Running Tests
+
+Weightless includes a comprehensive test suite to ensure reliability.
+
+### 1. Install Test Dependencies
+If you haven't already, install the testing libraries:
+```bash
+npm install
+# If you encounter EPERM/permission errors, you may need:
+# sudo npm install
+```
+
+### 2. Unit Tests (Logic)
+Run fast, isolated tests for the Cost Engine and Material Registry:
+```bash
+npm test
+```
+
+### 3. End-to-End Tests (Browser)
+Run the full browser automation suite (requires Playwright browsers):
+```bash
+npx playwright install # Run this once
+npm run test:e2e
+```
+
 ## License
 
 MIT
